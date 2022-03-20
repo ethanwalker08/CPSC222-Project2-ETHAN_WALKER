@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Page 5</title>
+    <link id = "icon" href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="breadcrumb navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Project 2</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link breadcrumb-item" href="index.html">Home</a>
+            <a class="nav-item nav-link breadcrumb-item" href="contact.html">Contact</a>
+            <a class="nav-item nav-link breadcrumb-item" href="page3.html">Page 3</a>
+            <a class="nav-item nav-link breadcrumb-item" href="page4.html">Page 4</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item nav-link breadcrumb-item active">Page 5 <span class="sr-only">(current)</span></a>
+                  <a class="dropdown-item nav-link breadcrumb-item" href="page6.html">Page 6</a>
+                  <a class="dropdown-item nav-link breadcrumb-item" href="page7.html">Page 7</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <form id="login" class="form-inline needs-validation" onsubmit="replaceForm(this)">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input id="username" type="text" class="form-control username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+          </div>
+          <input id="password" type="password" class="form-control password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+      </form>
+      
+      <p id="afterLogin">
+  
+      </p>
+  </nav>
+  <h1>
+    Welcome to Project 2
+  </h1>
+  <p>
+    This is the second project for cpsc 222 <br>
+    I hope you enjoy my website! <br>
+  </p>
+      <!-- Required JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+      <!-- Add your JS Here -->
+      <script type="text/javascript">
+      
+      function replaceForm() {
+        var form = document.getElementById("login");
+        var username = document.getElementById("username").value;
+        var hello = "Hello " + username;
+        var replacedWith = document.getElementById("afterLogin");
+        form.remove();
+        replacedWith.innerHTML = hello;
+        return true;
+      }
+      </script>
+    </body>
+  </html>

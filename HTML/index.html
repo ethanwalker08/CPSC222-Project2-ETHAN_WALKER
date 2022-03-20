@@ -13,42 +13,41 @@
     <link id = "icon" href="images/favicon.ico" rel="icon" type="image/x-icon">
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">CPSC-222 Project 2</a>
+    <nav class="breadcrumb navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Project 2</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active breadcrumb-item">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link breadcrumb-item" href="contact.html">Contact</a>
+          <a class="nav-item nav-link breadcrumb-item" href="page3.html">Page 3</a>
+          <a class="nav-item nav-link breadcrumb-item" href="page4.html">Page 4</a>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item nav-link breadcrumb-item" href="page5.html">Page 5</a>
+                <a class="dropdown-item nav-link breadcrumb-item" href="page6.html">Page 6</a>
+                <a class="dropdown-item nav-link breadcrumb-item" href="page7.html">Page 7</a>
+            </div>
           </div>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a>Home</a></li>
-            <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
-            <li class="breadcrumb-item"><a href="page3.html">Page 3</a></li>
-            <li class="breadcrumb-item"><a href="page4.html">Page 4</a></li>
-            <li class="breadcrumb-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="breadcrumb-item dropdown-item" href="page5.html">Page 5</a>
-                <a class="breadcrumb-item dropdown-item" href="page6.html">Page 6</a>
-                <a class="breadcrumb-item dropdown-item" href="page7.html">Page 7</a>
-              </div>
-            </li>
-          </ol>
-        </nav>
-        <form onsubmit="validateForm()" id="form" class="navbar-form navbar-right" role="login" method="post">
-          <div class="form-group">
-            <input id= "usr" type="text" class="form-control" placeholder="Username" required>
-          </div>
-          <div class="form-group">
-            <input id="pword" type="password" class="form-control" placeholder="Password" required>
-          </div>
-          <button id = "submit" type="submit" class="btn btn-default">Submit</button>
-        </form>
+        </div>
       </div>
-      <p id="hello">
-      </p>
-    </nav>
+      <form id="login" class="form-inline needs-validation" onsubmit="replaceForm(this)">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input id="username" type="text" class="form-control username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+        <input id="password" type="password" class="form-control password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+    </form>
+    
+    <p id="afterLogin">
+
+    </p>
+</nav>
 
     <!-- Required JS files: jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -57,27 +56,16 @@
 
     <!-- Add your JS Here -->
     <script type="text/javascript">
-      var form = document.getElementById('form')
-      var hello = document.getElementById('hello')
-      var usr = document.getElementById('usr')
-      function validateForm(){
-        var inputs = form.getElementsByTagName('input');
-        for(var i = 0;i< inputs.length;i++){
-          if(inputs[i].hasAttribute("required")){
-            if(inputs[i].value == ""){
-              alert("Please fill out the required fields");
-              return false
-            }
-          }
-        }
-        deleteForm();
-        return true;
-      }
-      function deleteForm(){
-        form.remove;
-        hello.innerHTML = "Hello- " + usr;
-        
-      }
+    
+    function replaceForm() {
+      var form = document.getElementById("login");
+      var username = document.getElementById("username").value;
+      var hello = "Hello " + username;
+      var replacedWith = document.getElementById("afterLogin");
+      form.remove();
+      replacedWith.innerHTML = hello;
+      return true;
+    }
     </script>
   </body>
 </html>
