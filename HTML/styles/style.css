@@ -1,0 +1,18 @@
+body{
+  margin: 30px;
+}
+.urgent{
+  font-weight: bold;
+}
+.modal-body img{
+  height: 400px;
+  width: 400;
+  position: relative;
+}
+.carousel{
+  height: 50%;
+  width: 50%;
+}
+.carousel-item{
+  transition-property: fade;
+}

@@ -7,9 +7,9 @@
 
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <title>Welcome to my Meme Page</title>
-
+  
     <link id = "icon" href="images/favicon.ico" rel="icon" type="image/x-icon">
   </head>
   <body>
@@ -58,14 +58,33 @@
   </p>
 
   <div class="jumbotron">
-    <h1 class="display-4">Best Videos Ever!</h1>
+    <h1 class="display-4">Best Videos and Memes Ever!</h1>
     <p class="lead">These are the best videos on the internet... to watch one, click one of the buttons below</p>
     <p><a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/B3WJaC-7g2c" role="button">Video 1</a> or <a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/QbC6dLG_dQY" role="button">Video 2</a></p>
+    <p><br><br> Click the button below to see a meme image</p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#memeModal">Click me</button>
+ 
+  </div>
+  
+  <div class="modal fade" id="memeModal" tabindex="-1" role="dialog" aria-labelledby="memeModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="memeModal">HAHA FUNNY</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="./images/carousel/thechosenone.jpg" alt="the funny haha">
+        </div>
+      </div>
+    </div>
   </div>
 
 
       <div id="carouselWithIndicators" class="carousel" data-ride="carousel">
-          <ol class="carousel-indicators">
+          <ol class="carousel-indicators round">
             <li data-target="#carouselWithIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselWithIndicators" data-slide-to="1"></li>
             <li data-target="#carouselWithIndicators" data-slide-to="2"></li>
