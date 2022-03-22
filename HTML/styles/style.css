@@ -1,18 +1,38 @@
 body{
-  margin: 30px;
+  margin: 30px; 
 }
 .urgent{
   font-weight: bold;
 }
 .modal-body img{
-  height: 400px;
-  width: 400;
+  height: 450px;
+  width: 450px;
   position: relative;
+  margin-left: 9px;
 }
 .carousel{
-  height: 50%;
   width: 50%;
+  height: 30%;
+  margin: auto;
 }
-.carousel-item{
-  transition-property: fade;
+.jumbotron{
+  background-color: wheat;
+}
+.btn{
+  background-color: crimson;
+  border-color: transparent;
+  vertical-align: middle;
+}
+.btn-outline-success{
+  border-style: solid;
+  border-radius: 10%;
+}
+.btn-lg{
+  color: white;
+}
+label, input{
+  display: flex;
+}
+label{
+  padding-right: 20px;
 }
