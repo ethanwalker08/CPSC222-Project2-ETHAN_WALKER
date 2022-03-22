@@ -36,3 +36,8 @@ label, input{
 label{
   padding-right: 20px;
 }
+.haha-img{
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}

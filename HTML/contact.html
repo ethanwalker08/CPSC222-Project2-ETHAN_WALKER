@@ -7,10 +7,12 @@
 
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
     <title>Contact</title>
 
     <link id = "icon" href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="">
   </head>
   <body class="text-center">
     <nav style="--bs-breadcrumb-divider: '|';" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -98,7 +100,11 @@
     <p><a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/B3WJaC-7g2c" role="button">Video 1</a> or <a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/QbC6dLG_dQY" role="button">Video 2</a></p>
     <p> <br></p>
     <hr size="2" width="90%" color="gray">
-    <img style="height: 20%; width: 20%;" src="./images/carousel/roast.jpeg" alt="the funny haha">
+    <img class="haha-img" src="./images/roast.jpeg" alt="the funny haha">
+
+    <footer class="text-center"><br><br>
+      <button onclick="changeBackground()" class="btn btn-lg">Click me for a funny background</button>
+    </footer>
 
     <!-- Required JS files: jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -116,6 +122,9 @@
       form.remove();
       replacedWith.innerHTML = hello;
       return true;
+    }
+    function changeBackground(){
+        document.body.style.backgroundImage = "url('./images/soviet.jpg')";
     }
     </script>
   </body>
