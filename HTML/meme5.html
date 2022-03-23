@@ -28,7 +28,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item nav-link breadcrumb-item" href="meme3.html">Meme 3</a>
                   <a class="dropdown-item nav-link breadcrumb-item" href="meme4.html">Meme 4</a>
-                  <a class="dropdown-item nav-link breadcrumb-item active">Meme 5 <span class="sr-only">(current)</span></a>
+                  <a class="dropdown-item nav-link breadcrumb-item active">Suggestion Box <span class="sr-only">(current)</span></a>
                 </div>
             </div>
           </div>
@@ -57,6 +57,77 @@
     There are many memes on this website for you to enjoy. <br>
     <img class="haha-img" src="./images/quirkedupwhiteboy.jpg" alt="whitey" style="width: 70%; height: 70%; object-fit: cover;">
   </p>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#suggestionModal">
+  Launch Suggestion Box
+</button>
+
+<div class="modal fade" id="suggestionModal" tabindex="-1" role="dialog" aria-labelledby="suggestionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="suggestionModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <form>
+          <div class="form-group">
+          <div class="form-row align-items-center">
+            <div class="col-md-6 mb-3">
+            <label for="f_name">First Name</label>
+            <input value="" type="text" class="form-control" name="f_name" id="f_name" placeholder="John" required>
+              </div>
+          
+            <div class="col-md-6 mb-3">
+            <label for="l_name">Last Name</label>
+            <input value="" type="text" class="form-control" name="l_name" id="l_name" placeholder="Smith" required>
+              </div>
+          
+          </div>
+          
+          </div>
+          
+          <div class="form-group">
+          <div class="form-row align-items-center">
+            <div class="col-md-6 mb-3">
+            <label for="title">Meme Title</label>
+            <input value="" type="text" class="form-control" name="title" id="title" placeholder="MEME">
+              </div>
+            <div class="col-md-3 mb-3">
+            <label for="mid">Middle Inital</label>
+            <input value="" type="text" class="form-control" name="mid" id="mid" placeholder="C.">
+              </div>
+          
+          </div>
+          
+          </div>
+          <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea class="form-control" rows="8" name="desc" id="desc" placeholder="idk... its pretty good" required></textarea>
+          </div>
+        </form>
+
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          </div>
+        </form>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<p><a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/IcrAj-2B7fY" role="button">Video 1</a> or <a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/QbC6dLG_dQY" role="button">Video 2</a></p>
+
 
   <footer class="text-center"><br><br>
     <button onclick="changeBackground()" class="btn btn-lg">Click me for a funny background</button>
