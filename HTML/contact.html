@@ -43,7 +43,7 @@
           <input id="username" type="text" class="form-control username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>
         <input id="password" type="password" class="form-control password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+        <button class="btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
     </form>
     
     <p id="afterLogin">
@@ -57,42 +57,128 @@
   This is where you fill out the form.
 </p>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">Click me to fill out the form</button>
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModal" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="formModal">Contact</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<form>
+  <div class="form-group">
+  <div class="form-row align-items-center">
+    <div class="col-md-6 mb-3">
+    <label for="f_name">First Name</label>
+    <input value="" type="text" class="form-control" name="f_name" id="f_name" placeholder="First Name" required>
       </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="form-row">
-            <form class="form-inline">
-              <div class="form-group">
-                <label for="first-name"> First
-                  <input placeholder="First Name" type="text" class="form-control" id="first-name">
-                </label>
-              </div>
+  
+    <div class="col-md-6 mb-3">
+    <label for="l_name">Last Name</label>
+    <input value="" type="text" class="form-control" name="l_name" id="l_name" placeholder="Last Name" required>
+      </div>
+  
+  </div>
+  
+  </div>
+  
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input value="" type="text" class="form-control" name="address" id="address" placeholder="123 Main St">
+  </div>
+  
+  <div class="form-group">
+  <div class="form-row align-items-center">
+    <div class="col-md-6 mb-3">
+    <label for="city">City</label>
+    <input value="" type="text" class="form-control" name="city" id="city" placeholder="TimBuckTew">
+      </div>
+  
+    <div class="col-md-3 mb-3">
+    <label for="state">State</label>
+    <select class="custom-select" name="state" id="state" required>
+      <option value="1">choose</option>
+      <option value="2">Alabama</option>
+      <option value="3">Alaska</option>
+      <option value="4">Arizona</option>
+      <option value="5">Arkansas</option>
+      <option value="6">California</option>
+      <option value="7">Colorado</option>
+      <option value="8">Connecticut</option>
+      <option value="9">Delaware</option>
+      <option value="10">Florida</option>
+      <option value="11">Georgia</option>
+      <option value="12">Hawaii</option>
+      <option value="13">Idaho</option>
+      <option value="14">Illinois</option>
+      <option value="15">Indiana</option>
+      <option value="16">Iowa</option>
+      <option value="17">Kansas</option>
+      <option value="18">Kentucky</option>
+      <option value="19">Louisiana</option>
+      <option value="20">Maine</option>
+      <option value="21">Maryland</option>
+      <option value="22">Massechusetts</option>
+      <option value="23">Michigan</option>
+      <option value="24">Minnesota</option>
+      <option value="25">Mississippi</option>
+      <option value="26">Missouri</option>
+      <option value="27">Montana</option>
+      <option value="28">Nebraska</option>
+      <option value="29">Nevada</option>
+      <option value="30">New Hampshire</option>
+      <option value="31">New Jersey</option>
+      <option value="32">New Mexico</option>
+      <option value="33">New York</option>
+      <option value="34">North Carolina</option>
+      <option value="35">North Dakota</option>
+      <option value="36">Ohio</option>
+      <option value="37">Oklahoma</option>
+      <option value="38">Oregon</option>
+      <option value="39">Pennsylvania</option>
+      <option value="40">Rhode Island</option>
+      <option value="41">South Carolina</option>
+      <option value="42">South Dakota</option>
+      <option value="43">Tennessee</option>
+      <option value="44">Texas</option>
+      <option value="45">Utah</option>
+      <option value="46">Vermont</option>
+      <option value="47">Virginia</option>
+      <option value="48">Washington</option>
+      <option value="49">West Virginia</option>
+      <option value="50">Wisconson</option>
+      <option value="51">Wyoming</option>
+    </select>
 
-              <div class="form-group">
-                <label for="last-name"> Last
-                  <input placeholder="Last Name" type="text" class="form-control" id="last-name">
-                </label>
-                
-              </div>
-            </form>
-          </div>
-        </div>
-        
       </div>
+  
+    <div class="col-md-3 mb-3">
+    <label for="zip">Zip</label>
+    <input value="" type="text" class="form-control" name="zip" id="zip" placeholder="Zip">
+      </div>
+  
+  </div>
+  
+  </div>
+  <div class="form-group">
+    <label for="u_message">Message</label>
+    <textarea class="form-control" rows="8" name="u_message" id="u_message" required></textarea>
+  </div>
+</form>
+<button onclick="autoPopulate()">Click me to AutoFill</button>
+<div class="container">
+  <button onclick="popUpModal()" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal_popup" name="button_id_16" id="button_id_16">Contact</button>
+  <div class="modal fade" id="modal_popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Thanks!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modalText">
+
+          </p>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
-
-
 
 <hr size="2" width="90%" color="gray">
     <h1>Best Videos and Memes Ever!</h1>
@@ -125,6 +211,21 @@
     }
     function changeBackground(){
         document.body.style.backgroundImage = "url('./images/soviet.jpg')";
+    }
+    function popUpModal() {
+      var first = document.getElementById("f_name").value;
+      var last = document.getElementById("l_name").value;
+      var address = document.getElementById("address").value;
+      var modaltext = document.getElementById("modalText");
+      modaltext.innerHTML = "Thanks for reaching out "+first + " " + last +". We will be sure to reach out to you at " + address + " when we get the chance!"
+    }
+    function autoPopulate(){
+      let myValue = "populated"
+      var first = document.getElementById("f_name").setAttribute('value', myValue);
+      var last = document.getElementById("l_name").setAttribute('value', myValue);
+      var address = document.getElementById("address").setAttribute('value', myValue);
+      var city = document.getElementById("city").setAttribute('value', myValue);
+      var zip = document.getElementById("zip").setAttribute('value', myValue);
     }
     </script>
   </body>
