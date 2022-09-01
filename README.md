@@ -1,1 +1,1 @@
-# This is the starter code for CPSC222 Project 2 at Saint Francis University
+This is a project I completed for CPSC-222 (server side programming) at Saint Francis University
